@@ -7,7 +7,7 @@ typedef enum {
     TOKEN_GET,          // get (SELECT)
     TOKEN_PUT,          // put (INSERT)
     TOKEN_REMOVE,       // remove (DELETE)
-    TOKNE_REDO,         // redo (UPDATE)
+    TOKEN_REDO,         // redo (UPDATE)
     TOKEN_IS,           // is (=)
     TOKEN_IDENTIFIER,   // (table, column) names || values
     TOKEN_LPAREN,       // (

@@ -1,4 +1,4 @@
-#include "print.h"
+#include "yade/print.h"
 #include <string.h>
 
 int main(int argc, char *argv[]) {
