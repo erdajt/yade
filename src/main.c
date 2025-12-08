@@ -1,11 +1,14 @@
-#include <stdio.h>
+#include "print.h"
+#include <string.h>
 
-const char *banner = "     ▌\n"
-                     "▌▌▀▌▛▌█▌\n"
-                     "▙▌█▌▙▌▙▖\n"
-                     "▄▌\n";
-int main() {
-  printf("%s\nyet another database engine\n", banner);
+int main(int argc, char *argv[]) {
+  if (argc < 2 || strcmp(argv[1], "-h")) {
+    print_help();
+    return 0;
+  }
 
+  print_banner();
+
+  print_error("Invalid Arguments");
   return 0;
 }
