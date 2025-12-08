@@ -2,6 +2,12 @@
 #define YADE_LEXER_H
 #include <stddef.h>
 
+typedef struct {
+  const char *input;
+  size_t position;
+  char current_char;
+} yade_lexer;
+
 typedef enum {
     TOKEN_MAKE,         // make (CREATE)
     TOKEN_GET,          // get (SELECT)
@@ -14,11 +20,14 @@ typedef enum {
     TOKEN_RPAREN,       // )
     TOKEN_COMMA,        // ,
     TOKEN_EOF
-} lk_token_type;
+} yade_token_type;
 
 typedef struct {
-    lk_token_type type;
+    yade_token_type type;
     char *value;
-} lk_token;
+} yade_token;
+
+void lexer_init(yade_lexer *lexer, const char *input);
+const char *lexer_token_type_name(yade_token_type type);
 
 #endif // YADE_LEXER_H
