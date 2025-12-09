@@ -19,15 +19,20 @@ typedef enum {
     TOKEN_LPAREN,       // (
     TOKEN_RPAREN,       // )
     TOKEN_COMMA,        // ,
+    TOKEN_INVALID,
+    TOKEN_NUMBER,
     TOKEN_EOF
-} yade_token_type;
+} yade_token_t;
 
 typedef struct {
-    yade_token_type type;
-    char *value;
+    yade_token_t type;
+      union {
+        char *str;   // keywords
+        int num;     // integers
+    } value;
 } yade_token;
 
 void lexer_init(yade_lexer *lexer, const char *input);
-const char *lexer_token_type_name(yade_token_type type);
+const char *lexer_token_type_name(yade_token_t type);
 
 #endif // YADE_LEXER_H
