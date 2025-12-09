@@ -3,6 +3,6 @@
 
 void print_help(void);
 void print_banner(void);
-void print_error(char *err);
+void print_error(const char *fmt, ...);
 
 #endif // YADE_PRINT_H
