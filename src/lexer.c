@@ -138,6 +138,8 @@ const char *lexer_token_type_name(yade_token_t type) {
     return "redo";
   case TOKEN_IS:
     return "is";
+  case TOKEN_EOF:
+    return "EOF";
   default:
     return "UNKNOWN";
   }

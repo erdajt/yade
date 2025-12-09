@@ -34,5 +34,6 @@ typedef struct {
 
 void lexer_init(yade_lexer *lexer, const char *input);
 const char *lexer_token_type_name(yade_token_t type);
+yade_token lexer_get_next_token(yade_lexer *lexer);
 
 #endif // YADE_LEXER_H
