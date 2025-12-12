@@ -14,7 +14,12 @@ typedef enum {
     TOKEN_PUT,          // put (INSERT)
     TOKEN_REMOVE,       // remove (DELETE)
     TOKEN_REDO,         // redo (UPDATE)
+    TOKEN_IN,           // in (FROM)
+    TOKEN_IF,           // if (WHERE)
     TOKEN_IS,           // is (=)
+    TOKEN_NOT,          // not (!=)
+    TOKEN_AND,          // and (AND)
+    TOKEN_OR,           // or (OR)
     TOKEN_IDENTIFIER,   // (table, column) names || values
     TOKEN_LPAREN,       // (
     TOKEN_RPAREN,       // )

@@ -10,7 +10,9 @@ struct keyword {
 
 static struct keyword keywords[] = {
     {"make", TOKEN_MAKE},     {"put", TOKEN_PUT},   {"get", TOKEN_GET},
-    {"remove", TOKEN_REMOVE}, {"redo", TOKEN_REDO}, {"is", TOKEN_IS}};
+    {"remove", TOKEN_REMOVE}, {"redo", TOKEN_REDO}, {"is", TOKEN_IS},
+    {"in", TOKEN_IN},         {"if", TOKEN_IF},     {"not", TOKEN_NOT},
+    {"and", TOKEN_AND},       {"or", TOKEN_OR}};
 
 // lexer_advance: move lexer state (position & current_car) forward by one
 static void lexer_advance(yade_lexer *lexer) {
@@ -138,6 +140,16 @@ const char *lexer_token_type_name(yade_token_t type) {
     return "redo";
   case TOKEN_IS:
     return "is";
+  case TOKEN_IN:
+    return "in";
+  case TOKEN_IF:
+    return "if";
+  case TOKEN_NOT:
+    return "not";
+  case TOKEN_AND:
+    return "and";
+  case TOKEN_OR:
+    return "or";
   case TOKEN_EOF:
     return "EOF";
   default:
