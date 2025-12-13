@@ -21,19 +21,19 @@ typedef enum {
 } yade_op_t;
 
 typedef enum {
-  EXPR_NUMBER,
-  EXPR_STRING,
-  EXPR_IDENT,
-  EXPR_FIELD,
-  EXPR_BINARY
+  YADE_EXPR_NUMBER,
+  YADE_EXPR_STRING,
+  YADE_EXPR_IDENT,
+  YADE_EXPR_FIELD,
+  YADE_EXPR_BINARY
 } yade_expr_kind_t;
 
 typedef enum {
-  STMT_MAKE,
-  STMT_GET,
-  STMT_PUT,
-  STMT_REMOVE,
-  STMT_REDO
+  YADE_STMT_MAKE,
+  YADE_STMT_GET,
+  YADE_STMT_PUT,
+  YADE_STMT_REMOVE,
+  YADE_STMT_REDO
 } yade_stmt_kind_t;
 
 /* Expressions */
