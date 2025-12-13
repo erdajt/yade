@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
     if (token.type == TOKEN_INVALID) {
       print_error("Invalid token: %c at position: %zu\n", lexer.current_char,
                   lexer.position);
-      return 1;
+      // return 1;
     }
 
     printf("token name: %s, token type: %d\n",
