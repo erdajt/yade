@@ -4,7 +4,7 @@
     <img width="262" height="204" alt="image" src="./docs/assets/yade.png" />
 </p>
 
-current progress: lexer semi-finished
+current progress: lexer & AST done, parser in progress
 
 ```sh
 yade -i "make get put BADTEST redo is"
